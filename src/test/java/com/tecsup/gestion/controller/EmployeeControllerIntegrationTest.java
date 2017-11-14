@@ -44,7 +44,7 @@ public class EmployeeControllerIntegrationTest {
 		Assert.assertNotNull(wac.getBean("employeeController"));
 	}
 
-	@Test
+/*	@Test
 	public void list() throws Exception {
 		mockMvc.perform(get("/admin/emp/list"))
 				.andExpect(status().isOk())
@@ -81,6 +81,6 @@ public class EmployeeControllerIntegrationTest {
                 //		hasProperty("department", hasProperty("departmentId",is(12)))))
             ;
 	}
-
+*/
 	
 }
