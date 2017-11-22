@@ -19,4 +19,9 @@ public interface EmployeeService {
 	void delete(String login) throws DAOException;
 
 	void create(String login, String password, String lastname, String firstname, int salary, int deptId) throws DAOException;
+	Employee findEmployeeByLogin(String login) throws DAOException, EmptyResultException;
+ 
+	boolean isEmployeeExist(Employee emp) throws DAOException, EmptyResultException;
+	
+	
 }

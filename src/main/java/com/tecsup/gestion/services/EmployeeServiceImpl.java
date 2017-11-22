@@ -54,6 +54,24 @@ public class EmployeeServiceImpl implements EmployeeService {
 		employeeDAO.create(login, password, lastname, firstname, salary, dptId);
 
 	}
+
+	@Override
+	public Employee findEmployeeByLogin(String login) throws DAOException, EmptyResultException {
+		Employee emp = employeeDAO.findEmployeeByLogin(login);
+		return emp;
+	}
+
+	@Override
+	public boolean isEmployeeExist(Employee emp) throws DAOException, EmptyResultException {
+		List<Employee> emps = employeeDAO.findAllEmployees();
+		for (Employee employee : emps) {
+			if(employee.getLogin().equals(emp.getLogin())) {
+				return true;
+			}
+		}
+			
+		return false;
+	}
 	
 	
 
